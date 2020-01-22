@@ -18,8 +18,8 @@ export class UsersController {
   }
 
   @Post('/create')
-  createUser(@Body() createUserDto: CreateUserDto) {
-    this.usersService.createUser(createUserDto);
+  createUser(@Body() createUserDto: CreateUserDto): Promise<User> {
+    return this.usersService.createUser(createUserDto);
   }
 
   @Delete(':id')

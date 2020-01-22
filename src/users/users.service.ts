@@ -19,8 +19,8 @@ export class UsersService {
     return await this.usersRepository.findOne(id);
   }
 
-  createUser(createUserDto: CreateUserDto): void {
-    this.usersRepository.save(createUserDto);
+  async createUser(createUserDto: CreateUserDto): Promise<User> {
+    return await this.usersRepository.save(createUserDto);
   }
 
   async deleteUser(id: string): Promise<User> {
