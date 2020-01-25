@@ -5,7 +5,7 @@ import { User } from './users.entity';
 
 @Controller('users')
 export class UsersController {
-  constructor(private usersService: UsersService) { }
+  constructor(private readonly usersService: UsersService) { }
 
   @Get()
   getAllUser(): Promise<User[]> {
