@@ -4,7 +4,6 @@ export class CreateUserDto {
 }
 
 export class UpdateUserDto {
-  id: string;
   userName: string;
   password: string;
 }
