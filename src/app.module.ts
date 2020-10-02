@@ -9,11 +9,11 @@ import { User } from './users/users.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 3306,
-      username: 'root',
-      password: '',
-      database: 'nestcrud',
+      username: 'user',
+      password: 'HogeFuga911',
+      database: 'nest_crud_db',
       entities: [User],
       synchronize: true
     }),
